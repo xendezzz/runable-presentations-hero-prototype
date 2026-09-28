@@ -97,3 +97,34 @@
 .edit-prompt span{display:block;flex:none;width:26ch;max-width:calc(100% - 36px);animation:controlPromptTyping 4.8s steps(26,end) infinite}
 @keyframes controlPromptTyping{0%,5%{clip-path:inset(0 100% 0 0)}25%,91%{clip-path:inset(0 0 0 0)}95%,100%{clip-path:inset(0 100% 0 0)}}
 @media(prefers-reduced-motion:reduce){.edit-prompt span{clip-path:none;animation:none}}
+
+/* One shared atmospheric background for the complete feature family. */
+.features .control-art{background:#fff url('assets/presentations/control/sky-background.png') center top/100% 83% no-repeat}
+.control-art::before,.control-art::after{display:none}
+.template-sky{position:absolute;inset:0;perspective:900px}
+.sky-template{position:absolute;left:var(--x);top:var(--y);width:var(--w);z-index:var(--depth);transform:rotate(var(--r));}
+.sky-template .sky-slide{border:3px solid #fff;box-shadow:0 14px 30px #24455b26,0 2px 5px #24455b16;border-radius:7px;background:#fff;animation:skyFlight 4.6s cubic-bezier(.22,1,.36,1) infinite;animation-delay:var(--delay);will-change:transform,opacity}
+.sky-template:nth-child(-n+8){filter:saturate(.85);opacity:.8}
+@keyframes skyFlight{
+ 0%{transform:translate3d(-16px,24px,-50px) rotate(-4deg) scale(.86);opacity:0}
+ 8%{transform:translate3d(0,-4px,0) rotate(1deg) scale(1.02);opacity:1}
+ 13%,35%{transform:translate3d(0,0,0);opacity:1}
+ 43%,67%{transform:translate3d(9px,-9px,18px) rotate(2deg);opacity:1}
+ 75%,90%{transform:translate3d(-5px,-3px,0) rotate(-1deg);opacity:1}
+ 97%,100%{transform:translate3d(16px,-22px,-30px) scale(.92);opacity:0}
+}
+.control-export .export-deck{left:20%;right:20%;top:25%;padding:5px;border-radius:10px;box-shadow:0 20px 36px #29475e24,0 3px 8px #29475e12;animation:centerSlidePop 4.6s cubic-bezier(.16,1,.3,1) infinite;will-change:transform,opacity}
+.control-export .export-files{inset:0;display:block;pointer-events:none}
+.control-export .export-file{position:absolute;display:grid;place-items:center;padding:0;width:14%;aspect-ratio:1;border-radius:22%;background:#fffffff5;border:1px solid #ffffff;box-shadow:0 12px 22px #29475e20,0 2px 4px #29475e0d;animation:exportIconPop 4.6s cubic-bezier(.16,1,.3,1) infinite;will-change:transform,opacity}
+.control-export .export-file:nth-child(1){left:9%;top:47%;animation-delay:.12s}
+.control-export .export-file:nth-child(2){left:43%;top:7%;animation-delay:.24s}
+.control-export .export-file:nth-child(3){right:9%;top:47%;animation-delay:.36s}
+.control-export .file-symbol{width:58%;height:62%;background:none}
+.control-export .export-file strong,.control-export .export-file i{display:none}
+@keyframes centerSlidePop{0%{opacity:0;transform:translateY(14px) scale(.76)}7%{opacity:1;transform:translateY(-2px) scale(1.025)}12%,87%{opacity:1;transform:none}94%,100%{opacity:0;transform:translateY(5px) scale(.94)}}
+@keyframes exportIconPop{0%,8%{opacity:0;transform:translateY(12px) scale(.45)}15%{opacity:1;transform:translateY(-2px) scale(1.08)}20%,83%{opacity:1;transform:none}90%,100%{opacity:0;transform:scale(.88)}}
+@media(prefers-reduced-motion:reduce){.sky-template .sky-slide,.control-export .export-deck,.control-export .export-file{animation:none!important;transform:none;opacity:1}}
+
+.sky-slide{width:100%;aspect-ratio:16/9;background-image:url('assets/presentations/control/sky-templates-new.png')!important;background-size:300% 400%!important;background-repeat:no-repeat!important}
+/* Fine stippling is confined to the shared sky, underneath all artwork. */
+.features .control-art::after{display:block;content:"";position:absolute;inset:0 0 20%;z-index:-1;pointer-events:none;background-image:radial-gradient(circle,rgba(51,79,99,.22) .6px,transparent .85px),radial-gradient(circle,rgba(51,79,99,.12) .5px,transparent .8px);background-size:3px 3px;background-position:0 0,1.5px 1.5px;mask-image:linear-gradient(#000 35%,transparent 95%)}
