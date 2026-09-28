@@ -1,0 +1,99 @@
+/* Real layered compositions: all deck artwork retains its 16:9 slide ratio. */
+.features .control-art{position:relative;z-index:0;width:100%;height:100%;container-type:inline-size;overflow:hidden}
+.control-art img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;border-radius:4px}
+.layout-grid{position:absolute;inset:11% 7% auto;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.layout-tile{position:relative;background:#fff;padding:5px;border:1px solid #fff;border-radius:8px;box-shadow:0 5px 15px #28384812;animation:layoutSelect 6s infinite;animation-delay:calc(var(--tile,0)*1s)}
+.layout-tile:nth-child(2){--tile:1}.layout-tile:nth-child(3){--tile:2}.layout-tile:nth-child(4){--tile:3}.layout-tile:nth-child(5){--tile:4}.layout-tile:nth-child(6){--tile:5}
+.layout-check{position:absolute;right:-6px;top:-6px;display:grid;place-items:center;background:#171717;color:white;border:2px solid white;width:20px;height:20px;border-radius:50%;font:12px Arial;opacity:0;animation:layoutCheck 6s infinite;animation-delay:calc(var(--tile,0)*1s)}
+.layout-cursor{position:absolute;left:38%;top:36%;font-size:23px;filter:drop-shadow(0 2px 2px #fff);transform:rotate(-35deg);animation:cursorBrowse 6s infinite}
+.edit-prompt{position:absolute;left:10%;right:10%;top:10%;padding:16px;display:flex;align-items:center;gap:10px;border:1px solid #ffffffdb;border-radius:12px;background:#fffffff0;box-shadow:0 12px 30px #44365312;font:500 clamp(10px,2.8cqw,16px)/1.4 Satoshi,sans-serif;animation:promptEnter 6s infinite}
+.edit-prompt span{white-space:nowrap;overflow:hidden;animation:promptType 6s steps(28,end) infinite}
+.edit-prompt b{margin-left:auto;flex:none;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#171717;color:white;font:18px Arial}
+.edit-slide{position:absolute;left:8%;right:8%;top:31%;aspect-ratio:16/9;border:5px solid white;border-radius:8px;background:white;box-shadow:0 16px 35px #392e491f;animation:slideLift 6s infinite}
+.edit-slide>img{width:100%;height:100%;aspect-ratio:16/9;object-fit:contain;animation:slideWarm 6s infinite}
+.edit-selection{position:absolute;inset:3% 1% 3% 50%;border:1.5px solid #6b7dde;animation:selectPhoto 6s infinite}
+.edit-selection i{position:absolute;width:6px;height:6px;background:white;border:1px solid #6b7dde;border-radius:1px}.edit-selection i:nth-child(1){left:-4px;top:-4px}.edit-selection i:nth-child(2){right:-4px;top:-4px}.edit-selection i:nth-child(3){left:-4px;bottom:-4px}.edit-selection i:nth-child(4){right:-4px;bottom:-4px}.edit-selection span{position:absolute;right:-17px;bottom:-22px;color:#171717;font-size:24px;transform:rotate(-35deg);filter:drop-shadow(0 1px 1px white)}
+.export-deck{position:absolute;left:22%;right:22%;top:10%;padding:6px;border:1px solid #fff;border-radius:9px;background:#ffffff;box-shadow:0 14px 30px #233e2920;animation:exportLift 5s infinite}
+.export-branches{position:absolute;top:40%;left:23%;right:23%;height:9%;border:1px solid #99ac9b;border-bottom:0;border-radius:12px 12px 0 0}.export-branches:before{content:"";position:absolute;left:50%;height:170%;bottom:0;border-left:1px solid #99ac9b}
+.export-files{position:absolute;top:49%;left:12%;right:12%;display:flex;gap:12px}
+.export-file{position:relative;flex:1;display:flex;align-items:center;flex-direction:column;gap:8px;padding:12px 5px;background:#ffffffed;border:1px solid #fff;border-radius:10px;box-shadow:0 8px 20px #26433212;animation:fileArrive 5s infinite}
+.export-file:nth-child(2){animation-delay:.16s}.export-file:nth-child(3){animation-delay:.32s}.file-symbol{display:grid;place-items:center;width:30px;height:34px;border-radius:5px;background:#fff0e6;color:#cc6327;font:700 11px Arial}.export-file:nth-child(2) .file-symbol{background:#ffeded;color:#c45353}.export-file:nth-child(3) .file-symbol{background:#fff6d8;color:#a98118}.export-file strong{font:500 clamp(10px,2.5cqw,14px) Satoshi,sans-serif}.export-file i{position:absolute;right:-4px;top:-4px;background:#3d7858;color:#fff;border:2px solid white;border-radius:50%;width:18px;height:18px;display:grid;place-items:center;font:11px Arial;animation:fileCheck 5s infinite}
+@keyframes layoutSelect{0%,15%{transform:translateY(-3px);border-color:#8898b5;box-shadow:0 10px 25px #28384820}18%,100%{transform:none;border-color:white}}
+@keyframes layoutCheck{0%,15%{opacity:1;transform:scale(1)}18%,100%{opacity:0;transform:scale(.7)}}
+@keyframes cursorBrowse{0%,14%{left:38%;top:29%}18%,30%{left:81%;top:29%}34%,47%{left:38%;top:46%}51%,64%{left:81%;top:46%}68%,81%{left:38%;top:62%}85%,97%{left:81%;top:62%}}
+@keyframes promptEnter{0%,5%,95%,100%{opacity:0;transform:translateY(8px)}12%,88%{opacity:1;transform:none}}
+@keyframes promptType{0%,15%{max-width:0}45%,100%{max-width:100%}}
+@keyframes slideWarm{0%,48%,100%{filter:none}60%,88%{filter:sepia(.2) saturate(1.15) brightness(1.06)}}
+@keyframes slideLift{0%,48%,100%{transform:none}57%,88%{transform:translateY(-3px)}}
+@keyframes selectPhoto{0%,18%,90%,100%{opacity:0}24%,84%{opacity:1}}
+@keyframes exportLift{0%,100%{transform:translateY(3px)}28%,75%{transform:translateY(-3px)}}
+@keyframes fileArrive{0%,12%,100%{opacity:.25;transform:translateY(-8px) scale(.94)}32%,88%{opacity:1;transform:none}}
+@keyframes fileCheck{0%,35%,100%{opacity:0;transform:scale(.5)}45%,85%{opacity:1;transform:scale(1)}}
+.features.is-compact .control-art{height:auto;aspect-ratio:1042/990;flex:none}
+.features .feature-card:not(.is-active) .control-art *{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.control-art *{animation:none!important}.edit-prompt span{max-width:100%}.edit-selection{opacity:1}.layout-check{opacity:0}.layout-tile:first-child .layout-check{opacity:1}}
+.layout-grid{top:19%;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+@keyframes cursorBrowse{0%,14%{left:28%;top:35%}18%,30%{left:57%;top:35%}34%,47%{left:85%;top:35%}51%,64%{left:28%;top:53%}68%,81%{left:57%;top:53%}85%,97%{left:85%;top:53%}}
+
+/* Warm video-page surface; texture stays behind the crisp UI. */
+.features .feature-card,.features.is-compact .feature-card{background:linear-gradient(155deg,#f5f1e9,#faf8f4 52%,#fff 88%)}
+.features .feature-card::before{z-index:0;opacity:.045;background-size:3px 3px;mask-image:linear-gradient(#000,transparent 76%)}
+.features .feature-card::after{z-index:0;opacity:.5}
+.features .control-art{z-index:1}
+.control-art *{animation-timing-function:cubic-bezier(.22,1,.36,1)}
+.features .feature-card:not(.is-active) .control-art *{animation:none}
+.layout-grid{top:18%;gap:12px}
+.layout-tile{border-color:#e9e5dd;animation-duration:4.8s;animation-delay:calc(var(--tile,0)*.8s)}
+.layout-check{animation-duration:4.8s;animation-delay:calc(var(--tile,0)*.8s)}
+.layout-cursor{animation-duration:4.8s}
+@keyframes layoutSelect{0%,12%{transform:translateY(-4px);border-color:#918273;box-shadow:0 12px 24px #42352620}16%,100%{transform:none;border-color:#e9e5dd}}
+@keyframes layoutCheck{0%,12%{opacity:1;transform:scale(1)}16%,100%{opacity:0;transform:scale(.8)}}
+.edit-prompt{top:12%;padding:14px 16px;border-color:#e8e3da;animation:none}
+.edit-prompt span{animation:none;max-width:100%}
+.edit-prompt b{animation:sendPress 4.8s infinite}
+.edit-slide{top:31%;border:4px solid #fff;animation:none;box-shadow:0 12px 28px #392e4917}
+.edit-slide>img{animation:none}
+.edit-slide>.edit-before{position:absolute;inset:0;filter:saturate(.12) brightness(.68) contrast(.9);clip-path:inset(0 0 0 45%);animation:photoReveal 4.8s infinite}
+.edit-selection{inset:0 0 0 45%;animation:selectPhoto 4.8s infinite}
+@keyframes sendPress{0%,25%,34%,100%{transform:scale(1);background:#171717}28%{transform:scale(.86);background:#8e7457}}
+/* A 288ms wipe, followed by a long, legible result hold. */
+@keyframes photoReveal{0%,34%{clip-path:inset(0 0 0 45%);opacity:1}40%,88%{clip-path:inset(0 0 0 100%);opacity:1}92%,100%{clip-path:inset(0 0 0 45%);opacity:1}}
+@keyframes selectPhoto{0%,16%,85%,100%{opacity:0}20%,79%{opacity:1}}
+.export-deck{top:15%;left:21%;right:21%;padding:5px;animation:none;border-color:#e8e3da}
+.export-branches{top:calc(15% + 32.625cqw + 12px);left:20%;right:auto;width:60%;height:7%;border:0;border-radius:0;overflow:visible}
+.export-branches path{fill:none;stroke:#b5aa9a;stroke-width:1.4;vector-effect:non-scaling-stroke;stroke-dasharray:420;animation:connectDraw 4.8s infinite}
+.export-branches:before{display:none}
+.export-files{top:calc(22% + 32.625cqw + 12px);left:10%;right:10%;gap:12px}
+.export-file{padding:12px 5px;border-color:#e9e5de;animation:fileArrive 4.8s infinite}
+.export-file:nth-child(2){animation-delay:.08s}.export-file:nth-child(3){animation-delay:.16s}
+.file-symbol,.export-file:nth-child(2) .file-symbol,.export-file:nth-child(3) .file-symbol{width:34px;height:36px;background:transparent}
+.file-symbol svg{width:100%;height:100%}
+.export-file i{animation:fileCheck 4.8s infinite;animation-delay:inherit}
+@keyframes connectDraw{0%,16%{stroke-dashoffset:420;opacity:.35}23%,88%{stroke-dashoffset:0;opacity:1}94%,100%{stroke-dashoffset:0;opacity:.35}}
+@keyframes fileArrive{0%,23%{transform:translateY(5px);box-shadow:0 3px 8px #26433208}29%,88%{transform:none;box-shadow:0 8px 20px #26433212}94%,100%{transform:translateY(5px);box-shadow:0 3px 8px #26433208}}
+@keyframes fileCheck{0%,30%,94%,100%{opacity:0;transform:scale(.75)}35%,88%{opacity:1;transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){.features .control-art *{animation:none!important}.edit-slide>.edit-before{display:none}.export-file i{opacity:1}.export-branches path{stroke-dashoffset:0}.edit-selection{opacity:0}}
+/* Keep the artwork inside the upper 70% at short desktop card heights. */
+.edit-prompt{top:8%}
+.edit-slide{top:25%;left:10%;right:10%}
+.export-deck{top:10%;left:25%;right:25%}
+.export-branches{top:calc(10% + 28.125cqw + 12px);height:6%}
+.export-files{top:calc(16% + 28.125cqw + 12px)}
+.export-file{padding:9px 5px;gap:5px}
+.edit-slide{aspect-ratio:auto}
+.edit-slide>img:not(.edit-before){height:auto;aspect-ratio:16/9}
+.features .feature-card:not(.is-active) .edit-before{opacity:0}
+.features .feature-card:not(.is-active) .edit-selection{opacity:0}
+
+/* Same sage, peach and blue stippled surfaces as carousel visual-features.css. */
+.features .feature-card,.features.is-compact .feature-card{background:#fff}
+.features .feature-card::before,.features .feature-card::after{display:none}
+.control-art{--demo-base:#eaf1ec;--demo-glow:#d5e695;--demo-accent:#a1c5b1;--demo-ink:54,91,69;isolation:isolate;background:linear-gradient(var(--demo-base),var(--demo-base) 40%,#fff 80%)}
+.control-edit{--demo-base:#f4ece9;--demo-glow:#ffd9ae;--demo-accent:#e7aaa7;--demo-ink:136,72,58}
+.control-export{--demo-base:#e8edf3;--demo-glow:#b9cff1;--demo-accent:#dfa98e;--demo-ink:48,75,116}
+.control-art::before,.control-art::after{content:"";position:absolute;inset:0 0 20%;pointer-events:none;z-index:-1}
+.control-art::before{background:radial-gradient(ellipse at 15% 22%,var(--demo-glow),transparent 62%),radial-gradient(ellipse at 92% 55%,var(--demo-accent),transparent 66%);mask-image:linear-gradient(#000 45%,transparent 100%)}
+.control-art::after{background-image:radial-gradient(circle,rgba(var(--demo-ink),.32) .65px,transparent .85px),radial-gradient(circle,rgba(var(--demo-ink),.18) .5px,transparent .8px);background-size:3px 3px,3px 3px;background-position:0 0,1.5px 1.5px;mask-image:linear-gradient(135deg,#000,rgba(0,0,0,.35) 45%,#000 80%,transparent),linear-gradient(#000 45%,transparent 100%);mask-composite:intersect}
+.edit-prompt span{display:block;flex:none;width:26ch;max-width:calc(100% - 36px);animation:controlPromptTyping 4.8s steps(26,end) infinite}
+@keyframes controlPromptTyping{0%,5%{clip-path:inset(0 100% 0 0)}25%,91%{clip-path:inset(0 0 0 0)}95%,100%{clip-path:inset(0 100% 0 0)}}
+@media(prefers-reduced-motion:reduce){.edit-prompt span{clip-path:none;animation:none}}

@@ -1,0 +1,127 @@
+[
+  {
+    "key": "hero-wellness",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-74539829-3eef-44de-ac33-5160d0d0e4a5.png",
+    "asset": "dist/assets/presentations/hero-wellness.webp"
+  },
+  {
+    "key": "hero-coastal",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-2f7c8b33-bebb-45f6-9b29-65230bcb4235.png",
+    "asset": "dist/assets/presentations/hero-coastal.webp"
+  },
+  {
+    "key": "hero-skincare",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-0729f1a4-66e0-4eb8-831f-9baad1fcc214.png",
+    "asset": "dist/assets/presentations/hero-skincare.webp"
+  },
+  {
+    "key": "hero-studio",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-38cafbae-81db-426b-a3a5-fe69befe386c.png",
+    "asset": "dist/assets/presentations/hero-studio.webp"
+  },
+  {
+    "key": "hero-matcha",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-aa5dcb47-749d-4c44-b16a-6b74e3180b4f.png",
+    "asset": "dist/assets/presentations/hero-matcha.webp"
+  },
+  {
+    "key": "hero-workshop",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-ae471cfb-3d1f-44a5-9aa1-0fc1173afe5f.png",
+    "asset": "dist/assets/presentations/hero-workshop.webp"
+  },
+  {
+    "key": "template-pitch",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-8b290b1a-fa3c-463f-8fee-a472314399f6.png",
+    "asset": "dist/assets/presentations/template-pitch.webp"
+  },
+  {
+    "key": "template-sales",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-30098fd6-ad84-4adc-9ea6-f802e5552bde.png",
+    "asset": "dist/assets/presentations/template-sales.webp"
+  },
+  {
+    "key": "template-team",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-42a29c0a-53f2-42ef-a44c-7bbdbd876602.png",
+    "asset": "dist/assets/presentations/template-team.webp"
+  },
+  {
+    "key": "template-research",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-39bb3e50-73cc-419d-8619-33c4066a0eac.png",
+    "asset": "dist/assets/presentations/template-research.webp"
+  },
+  {
+    "key": "template-lessons",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-29d9f43f-dd6e-410b-9fac-3ec0d43e927e.png",
+    "asset": "dist/assets/presentations/template-lessons.webp"
+  },
+  {
+    "key": "footer-food",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-63076cb8-04ac-49fa-9c7f-a09980631d5d.png",
+    "asset": "dist/assets/presentations/footer-food.webp"
+  },
+  {
+    "key": "footer-fashion",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-e2ddde0a-c5d6-4b4e-9fd6-51c81429235b.png",
+    "asset": "dist/assets/presentations/footer-fashion.webp"
+  },
+  {
+    "key": "footer-city",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-b40997f6-d388-4053-ad3c-34019fa608a3.png",
+    "asset": "dist/assets/presentations/footer-city.webp"
+  },
+  {
+    "key": "footer-music",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-5cd813f0-8e78-4ee9-aa64-28adad2fa38b.png",
+    "asset": "dist/assets/presentations/footer-music.webp"
+  },
+  {
+    "key": "footer-finance",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-29e26ae3-4aa5-44ab-ac0b-5067147131e6.png",
+    "asset": "dist/assets/presentations/footer-finance.webp"
+  },
+  {
+    "key": "footer-nature",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-5dc3c855-636a-41fa-b5f7-d8b450ee6ca5.png",
+    "asset": "dist/assets/presentations/footer-nature.webp"
+  },
+  {
+    "key": "feature-generate",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-6a389026-56da-49a8-b8b5-c43a063ef9a9.png",
+    "asset": "dist/assets/presentations/feature-generate.webp"
+  },
+  {
+    "key": "feature-layouts",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-427a3300-b41a-492e-b75e-abf1da9bce99.png",
+    "asset": "dist/assets/presentations/feature-layouts.webp"
+  },
+  {
+    "key": "feature-edit",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-fd96b570-9214-4356-9416-222a6a774a55.png",
+    "asset": "dist/assets/presentations/feature-edit.webp"
+  },
+  {
+    "key": "feature-export",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-8686f297-97bf-4c3b-9930-b4aa18ba6461.png",
+    "asset": "dist/assets/presentations/feature-export.webp"
+  },
+  {
+    "key": "feature-sources",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-085f18ed-643c-4455-9d88-a3d15091cb7e.png",
+    "asset": "dist/assets/presentations/feature-sources.webp"
+  },
+  {
+    "key": "manage-mobile",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-fa20f9cd-3094-4cf9-a0ba-206496cddeb5.png",
+    "asset": "dist/assets/presentations/manage-mobile.webp"
+  },
+  {
+    "key": "manage-desktop",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-3290b8be-ee17-4284-a49e-c8b1730f3e03.png",
+    "asset": "dist/assets/presentations/manage-desktop.webp"
+  },
+  {
+    "key": "process",
+    "source": "/Users/abhijeet/.codex/generated_images/01a0d7c7-6145-7291-8dd6-74fcf498d8e1/exec-f6dca2be-f974-436a-b4d1-ca5d71428e12.png",
+    "asset": "dist/assets/presentations/process.webp"
+  }
+]
